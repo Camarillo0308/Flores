@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,247 +17,156 @@ body {
     min-height: 100vh;
     overflow: hidden;
     font-family: "Segoe UI", Arial, sans-serif;
-
-    background:
-        radial-gradient(circle at center,
-        #fffde7 0%,
-        #fff3b0 45%,
-        #ffe082 100%);
+    background: linear-gradient(135deg, #fffde7, #fff3b0, #ffe082);
 }
 
-/* =====================================================
+/* =========================
    PANTALLA INICIAL
-===================================================== */
+========================= */
 
 .inicio {
     position: fixed;
     inset: 0;
-
     z-index: 100;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 
     background:
-        radial-gradient(circle at center,
-        #fffde7 0%,
-        #ffe082 100%);
+        radial-gradient(circle at center, #fffde7 0%, #ffe082 100%);
 
     transition: opacity 1.5s ease;
 }
 
 .contenido-inicio {
     padding: 30px;
-
     animation: aparecer 2s ease;
 }
 
-.flor-icono {
+.contenido-inicio .flor-icono {
     font-size: 80px;
-
-    animation:
-        flotar 3s ease-in-out infinite;
+    animation: flotar 3s ease-in-out infinite;
 }
 
 .contenido-inicio h1 {
     color: #8d6e00;
-
     font-size: 32px;
-
-    margin:
-        15px 0 10px;
+    margin: 15px 0 10px;
 }
 
 .contenido-inicio p {
     color: #6d5710;
-
     font-size: 18px;
-
     margin-bottom: 30px;
 }
 
-/* =====================================================
-   BOTÓN
-===================================================== */
-
 .boton {
     border: none;
-
-    padding:
-        15px 30px;
-
+    padding: 15px 30px;
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffd600,
-            #ffb300
-        );
-
+    background: linear-gradient(135deg, #ffd600, #ffb300);
     color: white;
 
     font-size: 17px;
-
     font-weight: bold;
 
     cursor: pointer;
 
-    box-shadow:
-        0 8px 20px
-        rgba(180,130,0,.25);
+    box-shadow: 0 8px 20px rgba(180, 130, 0, .25);
 
-    transition:
-        transform .3s,
-        box-shadow .3s;
+    transition: transform .3s, box-shadow .3s;
 }
 
 .boton:hover {
-
-    transform:
-        scale(1.08);
-
-    box-shadow:
-        0 12px 25px
-        rgba(180,130,0,.35);
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(180, 130, 0, .35);
 }
 
-/* =====================================================
+/* =========================
    ESCENA
-===================================================== */
+========================= */
 
 .escena {
-
     position: relative;
-
     width: 100%;
-
     height: 100vh;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     opacity: 0;
-
-    transition:
-        opacity 2s ease;
+    transition: opacity 2s ease;
 }
 
 .escena.activa {
     opacity: 1;
 }
 
-/* =====================================================
-   BRILLOS
-===================================================== */
+/* =========================
+   ESTRELLAS / BRILLOS
+========================= */
 
 .brillo {
-
     position: absolute;
-
     width: 7px;
-
     height: 7px;
 
     background: white;
-
     border-radius: 50%;
 
-    box-shadow:
-        0 0 12px white;
+    box-shadow: 0 0 12px white;
 
-    animation:
-        brillo 2.5s infinite ease-in-out;
+    animation: brillo 2.5s infinite ease-in-out;
 }
 
-.b1 {
-    left: 10%;
-    top: 15%;
-}
+.b1 { left: 10%; top: 15%; }
+.b2 { left: 80%; top: 20%; animation-delay: .5s; }
+.b3 { left: 20%; top: 70%; animation-delay: 1s; }
+.b4 { left: 90%; top: 65%; animation-delay: 1.5s; }
+.b5 { left: 50%; top: 10%; animation-delay: .8s; }
+.b6 { left: 65%; top: 75%; animation-delay: 1.2s; }
 
-.b2 {
-    left: 80%;
-    top: 20%;
-    animation-delay: .5s;
-}
-
-.b3 {
-    left: 20%;
-    top: 70%;
-    animation-delay: 1s;
-}
-
-.b4 {
-    left: 90%;
-    top: 65%;
-    animation-delay: 1.5s;
-}
-
-.b5 {
-    left: 50%;
-    top: 10%;
-    animation-delay: .8s;
-}
-
-.b6 {
-    left: 65%;
-    top: 75%;
-    animation-delay: 1.2s;
-}
-
-/* =====================================================
+/* =========================
    RAMO
-===================================================== */
+========================= */
 
 .ramo {
-
     position: relative;
 
     width: 360px;
-
     height: 560px;
 
-    transform:
-        translateY(40px);
+    transform: translateY(40px);
 
-    animation:
-        aparecerRamo 2s ease forwards;
+    animation: aparecerRamo 2s ease forwards;
 }
 
-/* =====================================================
+/* =========================
    TALLOS
-===================================================== */
+========================= */
 
 .tallo {
-
     position: absolute;
 
     bottom: 95px;
-
     left: 50%;
 
     width: 8px;
-
     height: 350px;
 
-    background:
-        linear-gradient(
-            to right,
-            #236b2b,
-            #4caf50,
-            #236b2b
-        );
+    background: linear-gradient(
+        to right,
+        #236b2b,
+        #4caf50,
+        #236b2b
+    );
 
     border-radius: 10px;
 
-    transform-origin:
-        bottom;
+    transform-origin: bottom;
 }
 
 .t1 { transform: rotate(-32deg); }
@@ -269,116 +177,91 @@ body {
 .t6 { transform: rotate(24deg); }
 .t7 { transform: rotate(34deg); }
 
-/* =====================================================
+/* =========================
    FLORES
-===================================================== */
+========================= */
 
 .flor {
-
     position: absolute;
 
     width: 125px;
-
     height: 125px;
 
-    transform:
-        scale(0);
+    transform: scale(0);
 
-    animation:
-        aparecerFlor 1.5s ease forwards,
-        balanceo 4s ease-in-out infinite;
+    animation: aparecerFlor 1.5s ease forwards,
+               balanceo 4s ease-in-out infinite;
 
-    transform-origin:
-        bottom center;
+    transform-origin: bottom center;
 }
 
 .flor1 {
     left: 0;
     top: 45px;
-
-    animation-delay:
-        .5s, 2s;
+    animation-delay: .5s, 2s;
 }
 
 .flor2 {
     left: 65px;
     top: 0;
-
-    animation-delay:
-        .9s, 2.2s;
+    animation-delay: .9s, 2.2s;
 }
 
 .flor3 {
     left: 130px;
     top: 55px;
-
-    animation-delay:
-        1.3s, 2.4s;
+    animation-delay: 1.3s, 2.4s;
 }
 
 .flor4 {
     left: 190px;
     top: 5px;
-
-    animation-delay:
-        1.7s, 2.6s;
+    animation-delay: 1.7s, 2.6s;
 }
 
 .flor5 {
     left: 220px;
     top: 75px;
-
-    animation-delay:
-        2.1s, 2.8s;
+    animation-delay: 2.1s, 2.8s;
 }
 
 .flor6 {
     left: 80px;
     top: 110px;
-
-    animation-delay:
-        2.5s, 3s;
+    animation-delay: 2.5s, 3s;
 }
 
 .flor7 {
     left: 150px;
     top: 130px;
-
-    animation-delay:
-        2.9s, 3.2s;
+    animation-delay: 2.9s, 3.2s;
 }
 
-/* =====================================================
+/* =========================
    PÉTALOS
-===================================================== */
+========================= */
 
 .petalo {
-
     position: absolute;
 
     width: 38px;
-
     height: 62px;
 
     left: 44px;
-
     top: 0;
 
-    background:
-        linear-gradient(
-            to bottom,
-            #fff176,
-            #ffd600
-        );
+    background: linear-gradient(
+        to bottom,
+        #fff176,
+        #ffd600
+    );
 
     border-radius: 50%;
 
-    transform-origin:
-        19px 62px;
+    transform-origin: 19px 62px;
 
     box-shadow:
-        0 2px 5px
-        rgba(0,0,0,.12);
+        0 2px 5px rgba(0,0,0,.12);
 }
 
 .p1 { transform: rotate(0deg); }
@@ -390,20 +273,17 @@ body {
 .p7 { transform: rotate(270deg); }
 .p8 { transform: rotate(315deg); }
 
-/* =====================================================
-   CENTRO DE LAS FLORES
-===================================================== */
+/* =========================
+   CENTRO
+========================= */
 
 .centro {
-
     position: absolute;
 
     width: 48px;
-
     height: 48px;
 
     left: 39px;
-
     top: 39px;
 
     border-radius: 50%;
@@ -419,34 +299,27 @@ body {
     z-index: 5;
 
     box-shadow:
-        inset 0 3px 5px
-        rgba(0,0,0,.2),
-
-        0 2px 5px
-        rgba(0,0,0,.15);
+        inset 0 3px 5px rgba(0,0,0,.2),
+        0 2px 5px rgba(0,0,0,.15);
 }
 
-/* =====================================================
+/* =========================
    HOJAS
-===================================================== */
+========================= */
 
 .hoja {
-
     position: absolute;
 
     width: 85px;
-
     height: 35px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #2e7d32,
-            #66bb6a
-        );
+    background: linear-gradient(
+        135deg,
+        #2e7d32,
+        #66bb6a
+    );
 
-    border-radius:
-        100% 0 100% 0;
+    border-radius: 100% 0 100% 0;
 }
 
 .h1 {
@@ -473,23 +346,19 @@ body {
     transform: rotate(155deg);
 }
 
-/* =====================================================
+/* =========================
    ENVOLTURA
-===================================================== */
+========================= */
 
 .envoltura {
-
     position: absolute;
 
     bottom: 25px;
-
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     width: 275px;
-
     height: 190px;
 
     background:
@@ -499,82 +368,67 @@ body {
             #fff59d
         );
 
-    clip-path:
-        polygon(
-            10% 0,
-            90% 0,
-            100% 100%,
-            0 100%
-        );
+    clip-path: polygon(
+        10% 0,
+        90% 0,
+        100% 100%,
+        0 100%
+    );
 
     z-index: 10;
 
     box-shadow:
-        0 8px 20px
-        rgba(0,0,0,.15);
+        0 8px 20px rgba(0,0,0,.15);
 }
 
 .papel {
-
     position: absolute;
 
     bottom: 35px;
-
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     width: 240px;
-
     height: 150px;
 
-    background:
-        rgba(255,255,255,.65);
+    background: rgba(255,255,255,.65);
 
-    clip-path:
-        polygon(
-            15% 0,
-            85% 0,
-            100% 100%,
-            0 100%
-        );
+    clip-path: polygon(
+        15% 0,
+        85% 0,
+        100% 100%,
+        0 100%
+    );
 
     z-index: 11;
 }
 
-/* =====================================================
+/* =========================
    MOÑO
-===================================================== */
+========================= */
 
 .mono {
-
     position: absolute;
 
     bottom: 110px;
-
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     width: 110px;
-
     height: 65px;
 
     z-index: 20;
 }
 
 .lazo {
-
     position: absolute;
 
     width: 58px;
-
     height: 45px;
 
-    background:
-        #e91e63;
+    background: #e91e63;
 
     border-radius: 50%;
 
@@ -582,55 +436,42 @@ body {
 }
 
 .lazo.izq {
-
     left: 0;
-
-    transform:
-        rotate(25deg);
+    transform: rotate(25deg);
 }
 
 .lazo.der {
-
     right: 0;
-
-    transform:
-        rotate(-25deg);
+    transform: rotate(-25deg);
 }
 
 .nudo {
-
     position: absolute;
 
     left: 42px;
-
     top: 14px;
 
     width: 28px;
-
     height: 28px;
 
-    background:
-        #c2185b;
+    background: #c2185b;
 
     border-radius: 50%;
 
     z-index: 5;
 }
 
-/* =====================================================
-   MENSAJE INICIAL
-===================================================== */
+/* =========================
+   MENSAJE
+========================= */
 
 .mensaje {
-
     position: absolute;
 
     bottom: 20px;
-
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     width: 90%;
 
@@ -640,14 +481,10 @@ body {
 
     opacity: 0;
 
-    animation:
-        aparecerMensaje
-        2s ease
-        4s forwards;
+    animation: aparecerMensaje 2s ease 4s forwards;
 }
 
 .mensaje h2 {
-
     margin: 0;
 
     font-size: 28px;
@@ -656,7 +493,6 @@ body {
 }
 
 .mensaje p {
-
     margin-top: 8px;
 
     font-size: 17px;
@@ -664,244 +500,73 @@ body {
     color: #6d5710;
 }
 
-/* =====================================================
-   TARJETA DEL VERSÍCULO
-===================================================== */
-
-.versiculo {
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%)
-        scale(.7);
-
-    width: min(520px, 88%);
-
-    padding:
-        35px 30px;
-
-    text-align: center;
-
-    border-radius: 25px;
-
-    background:
-        rgba(255,255,255,.94);
-
-    box-shadow:
-        0 15px 50px
-        rgba(130,100,0,.25);
-
-    border:
-        1px solid
-        rgba(255,193,7,.35);
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    z-index: 80;
-
-    transition:
-        opacity 1.5s ease,
-        transform 1.5s ease;
-}
-
-.versiculo.mostrar {
-
-    opacity: 1;
-
-    transform:
-        translate(-50%, -50%)
-        scale(1);
-
-    pointer-events: auto;
-}
-
-.versiculo .flor-tarjeta {
-
-    font-size: 42px;
-
-    margin-bottom: 8px;
-
-    animation:
-        flotar 3s
-        ease-in-out
-        infinite;
-}
-
-.versiculo h2 {
-
-    margin:
-        0 0 18px;
-
-    color: #8d6e00;
-
-    font-size: 25px;
-}
-
-.versiculo blockquote {
-
-    margin: 0;
-
-    color: #5d4037;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 20px;
-
-    line-height: 1.6;
-
-    font-style: italic;
-}
-
-.versiculo .cita {
-
-    margin-top: 20px;
-
-    color: #b8860b;
-
-    font-weight: bold;
-
-    font-size: 17px;
-}
-
-.versiculo .dedicatoria {
-
-    margin-top: 20px;
-
-    color: #795548;
-
-    font-size: 16px;
-
-    line-height: 1.5;
-}
-
-/* =====================================================
-   BOTÓN CERRAR VERSÍCULO
-===================================================== */
-
-.cerrar {
-
-    margin-top: 22px;
-
-    padding:
-        10px 22px;
-
-    border: none;
-
-    border-radius: 20px;
-
-    background:
-        #ffd54f;
-
-    color:
-        #6d4c00;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-        transform .3s;
-}
-
-.cerrar:hover {
-
-    transform:
-        scale(1.05);
-}
-
-/* =====================================================
+/* =========================
    PÉTALOS CAYENDO
-===================================================== */
+========================= */
 
 .petalo-caida {
-
     position: fixed;
 
     top: -20px;
 
     width: 12px;
-
     height: 18px;
 
-    background:
-        #ffd600;
+    background: #ffd600;
 
-    border-radius:
-        100% 0 100% 0;
+    border-radius: 100% 0 100% 0;
 
-    animation:
-        caer linear forwards;
+    animation: caer linear forwards;
 
     z-index: 50;
 }
 
-/* =====================================================
+/* =========================
    ANIMACIONES
-===================================================== */
+========================= */
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
-        transform:
-            translateY(20px);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes aparecerRamo {
-
     from {
         opacity: 0;
-        transform:
-            translateY(100px)
-            scale(.8);
+        transform: translateY(100px) scale(.8);
     }
 
     to {
         opacity: 1;
-        transform:
-            translateY(40px)
-            scale(1);
+        transform: translateY(40px) scale(1);
     }
 }
 
 @keyframes aparecerFlor {
 
     0% {
-        transform:
-            scale(0);
+        transform: scale(0);
     }
 
     70% {
-        transform:
-            scale(1.15);
+        transform: scale(1.15);
     }
 
     100% {
-        transform:
-            scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes balanceo {
 
-    0%, 100% {
+    0%,100% {
         rotate: -2deg;
     }
 
@@ -912,14 +577,12 @@ body {
 
 @keyframes flotar {
 
-    0%, 100% {
-        transform:
-            translateY(0);
+    0%,100% {
+        transform: translateY(0);
     }
 
     50% {
-        transform:
-            translateY(-15px);
+        transform: translateY(-15px);
     }
 }
 
@@ -927,14 +590,12 @@ body {
 
     0%,100% {
         opacity: .2;
-        transform:
-            scale(.7);
+        transform: scale(.7);
     }
 
     50% {
         opacity: 1;
-        transform:
-            scale(1.5);
+        transform: scale(1.5);
     }
 }
 
@@ -942,96 +603,61 @@ body {
 
     from {
         opacity: 0;
-
-        transform:
-            translate(-50%,20px);
+        transform: translate(-50%,20px);
     }
 
     to {
         opacity: 1;
-
-        transform:
-            translate(-50%,0);
+        transform: translate(-50%,0);
     }
 }
 
 @keyframes caer {
 
     from {
-
         transform:
             translateY(-20px)
             rotate(0deg);
     }
 
     to {
-
         transform:
             translateY(110vh)
             rotate(720deg);
     }
 }
 
-/* =====================================================
+/* =========================
    CELULAR
-===================================================== */
+========================= */
 
-@media(max-width:600px) {
+@media(max-width: 600px) {
 
     .ramo {
-
-        transform:
-            scale(.72)
-            translateY(50px);
+        transform: scale(.78) translateY(50px);
     }
 
     .mensaje h2 {
-
-        font-size: 22px;
+        font-size: 23px;
     }
 
     .mensaje p {
-
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .contenido-inicio h1 {
-
         font-size: 26px;
-    }
-
-    .versiculo {
-
-        padding:
-            28px 22px;
-    }
-
-    .versiculo h2 {
-
-        font-size: 22px;
-    }
-
-    .versiculo blockquote {
-
-        font-size: 17px;
-    }
-
-    .versiculo .dedicatoria {
-
-        font-size: 14px;
     }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
+<!-- =========================
      PANTALLA INICIAL
-===================================================== -->
+========================= -->
 
 <div class="inicio" id="inicio">
 
@@ -1049,12 +675,8 @@ body {
             No es mucho, pero lo hice pensando en ti 💛
         </p>
 
-        <button
-            class="boton"
-            onclick="abrirRegalo()">
-
+        <button class="boton" onclick="abrirRegalo()">
             Abrir mi regalo 🌼
-
         </button>
 
     </div>
@@ -1062,14 +684,13 @@ body {
 </div>
 
 
-<!-- =====================================================
-     ESCENA
-===================================================== -->
+<!-- =========================
+     ESCENA DEL RAMO
+========================= -->
 
 <div class="escena" id="escena">
 
-
-    <!-- BRILLOS -->
+    <!-- Brillos -->
 
     <div class="brillo b1"></div>
     <div class="brillo b2"></div>
@@ -1079,14 +700,9 @@ body {
     <div class="brillo b6"></div>
 
 
-    <!-- =================================================
-         RAMO
-    ================================================== -->
-
     <div class="ramo">
 
-
-        <!-- TALLOS -->
+        <!-- Tallos -->
 
         <div class="tallo t1"></div>
         <div class="tallo t2"></div>
@@ -1097,7 +713,7 @@ body {
         <div class="tallo t7"></div>
 
 
-        <!-- HOJAS -->
+        <!-- Hojas -->
 
         <div class="hoja h1"></div>
         <div class="hoja h2"></div>
@@ -1105,9 +721,9 @@ body {
         <div class="hoja h4"></div>
 
 
-        <!-- =================================================
-             FLOR 1
-        ================================================== -->
+        <!-- =====================
+             FLORES
+        ====================== -->
 
         <div class="flor flor1">
 
@@ -1125,8 +741,6 @@ body {
         </div>
 
 
-        <!-- FLOR 2 -->
-
         <div class="flor flor2">
 
             <div class="petalo p1"></div>
@@ -1142,8 +756,6 @@ body {
 
         </div>
 
-
-        <!-- FLOR 3 -->
 
         <div class="flor flor3">
 
@@ -1161,8 +773,6 @@ body {
         </div>
 
 
-        <!-- FLOR 4 -->
-
         <div class="flor flor4">
 
             <div class="petalo p1"></div>
@@ -1178,8 +788,6 @@ body {
 
         </div>
 
-
-        <!-- FLOR 5 -->
 
         <div class="flor flor5">
 
@@ -1197,8 +805,6 @@ body {
         </div>
 
 
-        <!-- FLOR 6 -->
-
         <div class="flor flor6">
 
             <div class="petalo p1"></div>
@@ -1214,8 +820,6 @@ body {
 
         </div>
 
-
-        <!-- FLOR 7 -->
 
         <div class="flor flor7">
 
@@ -1233,14 +837,14 @@ body {
         </div>
 
 
-        <!-- ENVOLTURA -->
+        <!-- Envoltura -->
 
         <div class="envoltura"></div>
 
         <div class="papel"></div>
 
 
-        <!-- MOÑO -->
+        <!-- Moño -->
 
         <div class="mono">
 
@@ -1255,76 +859,22 @@ body {
     </div>
 
 
-    <!-- =================================================
+    <!-- =====================
          MENSAJE
-    ================================================== -->
+    ====================== -->
 
     <div class="mensaje">
 
         <h2>
-            Para ti, porque sí. 🌼
+            Para ti, Varona de Dios. 🌼
         </h2>
 
         <p>
-
-            A veces no hacen falta muchas palabras...
-
+“La mujer virtuosa es corona de su marido;
+Mas la mala, como carcoma en sus huesos.”
             <br>
-
-            solo un pequeño detalle para recordarte
-            que alguien pensó en ti. 💛
-
+            — Proverbios 12:4 (RVR1960)
         </p>
-
-    </div>
-
-
-    <!-- =================================================
-         TARJETA DEL VERSÍCULO
-    ================================================== -->
-
-    <div
-        class="versiculo"
-        id="versiculo">
-
-        <div class="flor-tarjeta">
-            🌼
-        </div>
-
-        <h2>
-            Una palabra para ti
-        </h2>
-
-        <blockquote>
-
-            “La mujer virtuosa es corona de su marido;
-            mas la mala, como carcoma en sus huesos.”
-
-        </blockquote>
-
-        <div class="cita">
-
-            Proverbios 12:4
-
-        </div>
-
-        <div class="dedicatoria">
-
-            Y quise acompañar estas flores con este
-            versículo porque hay personas que,
-            por su forma de ser, su corazón y todo
-            lo que representan, merecen ser valoradas
-            y recordadas. 💛
-
-        </div>
-
-        <button
-            class="cerrar"
-            onclick="cerrarVersiculo()">
-
-            🌼 Seguir viendo las flores
-
-        </button>
 
     </div>
 
@@ -1333,17 +883,14 @@ body {
 
 <script>
 
-/* =====================================================
+/* =========================
    ABRIR REGALO
-===================================================== */
+========================= */
 
 function abrirRegalo() {
 
-    const inicio =
-        document.getElementById("inicio");
-
-    const escena =
-        document.getElementById("escena");
+    const inicio = document.getElementById("inicio");
+    const escena = document.getElementById("escena");
 
     inicio.style.opacity = "0";
 
@@ -1355,52 +902,13 @@ function abrirRegalo() {
 
         crearPetalos();
 
-        /*
-         * Después de que las flores aparezcan,
-         * mostramos automáticamente el versículo.
-         */
-
-        setTimeout(() => {
-
-            mostrarVersiculo();
-
-        }, 7500);
-
     }, 1200);
 }
 
 
-/* =====================================================
-   MOSTRAR VERSÍCULO
-===================================================== */
-
-function mostrarVersiculo() {
-
-    const versiculo =
-        document.getElementById("versiculo");
-
-    versiculo.classList.add("mostrar");
-
-}
-
-
-/* =====================================================
-   CERRAR VERSÍCULO
-===================================================== */
-
-function cerrarVersiculo() {
-
-    const versiculo =
-        document.getElementById("versiculo");
-
-    versiculo.classList.remove("mostrar");
-
-}
-
-
-/* =====================================================
-   CREAR PÉTALOS
-===================================================== */
+/* =========================
+   PÉTALOS
+========================= */
 
 function crearPetalos() {
 
@@ -1411,9 +919,7 @@ function crearPetalos() {
             const petalo =
                 document.createElement("div");
 
-            petalo.classList.add(
-                "petalo-caida"
-            );
+            petalo.classList.add("petalo-caida");
 
             petalo.style.left =
                 Math.random() * 100 + "vw";
@@ -1422,15 +928,12 @@ function crearPetalos() {
                 (4 + Math.random() * 5) + "s";
 
             petalo.style.opacity =
-                0.5 +
-                Math.random() * 0.5;
+                0.5 + Math.random() * 0.5;
 
             petalo.style.transform =
                 `rotate(${Math.random() * 360}deg)`;
 
-            document.body.appendChild(
-                petalo
-            );
+            document.body.appendChild(petalo);
 
 
             setTimeout(() => {
